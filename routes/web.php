@@ -31,6 +31,10 @@ Route::get('/jobs.{id}', function ($id)  {
 
 });
 
+Route::post('/jobs', function(){
+    dd(request()->all());
+});
+
 
 Route::get('/contact', function () {
     return view('contact');
