@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+// Index page
 Route::get('/jobs', function ()  {
     $jobs = Job::with('employer')->latest()->simplePaginate(3);
 
@@ -17,15 +19,18 @@ Route::get('/jobs', function ()  {
     ]);
 });
 
+//Create page jobs
 Route::get('jobs/create', function(){
     return view('jobs.create');
 });
 
-Route::get('/jobs.{id}', function ($id)  {
+
+// Show page jobs
+Route::get('/jobs/{id}', function ($id)  {
 
     $job = Job::find($id);
 
-    return view('job.show', [
+    return view('jobs.show', [
         'job' => $job
     ]);
 
