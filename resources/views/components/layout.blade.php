@@ -27,7 +27,10 @@
           </div>
           <div class="hidden md:flex md:items-center md:space-x-6">
             @auth
-
+                <form method="POST" action="/logout">
+                    @csrf
+                    <x-form-button>Logout</x-form-button>
+                </form>
             @endauth
             @guest
                 <x-nav-link href="/login" :active="request()->is('login')" > Login </x-nav-link>
