@@ -9,7 +9,6 @@
                 <p class="mt-1 text-sm/6 text-gray-600">
                     We need some information to get started. You can always edit this later.
                 </p>
-
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <x-form-field>
                         <x-form-label for="title"> Title</x-form-label>
