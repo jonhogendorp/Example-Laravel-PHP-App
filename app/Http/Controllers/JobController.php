@@ -34,12 +34,12 @@ class JobController extends Controller
         ]);
 
         $job = Job::create([
-            'title' => request('title'),
+            'title' => request('title'),    
             'salary' => request('salary'),
             'employer_id' => 1
         ]);
 
-        Mail::to($job->employer->user)->send(
+        Mail::to($job->employer->user)->queue(
             new JobPosted($job));
 
 

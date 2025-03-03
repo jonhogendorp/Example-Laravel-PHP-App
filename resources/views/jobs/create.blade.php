@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:heading name="title">Create Job</x-slot>
 
-    {{--
+
         <form method="POST" action="/jobs" class="space-y-12">
         @csrf
         <div class="space-y-12">
@@ -42,5 +42,5 @@
         </x-form-button>
         </div>
         </form>
-    --}}
+
 </x-layout>
